@@ -210,7 +210,6 @@ footer {
         display: flex;
         flex-direction: column;
     }
-
     .menu {
         display: flex;
         flex-direction: column;
@@ -225,7 +224,7 @@ footer {
     }
 
     .menu-container footer {
-        margin-top: 9rem;
+        margin-top: 15rem;
         padding: 10px 5px;
         text-align: center;
     }
