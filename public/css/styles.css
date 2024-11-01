@@ -57,7 +57,7 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 14px 0;
+    margin: 8px 0;
     border: 1px solid #75c575;
     font-size: 16px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -79,6 +79,7 @@ button {
 
 img {
     width: 100%;
+    border: 1px solid #5cb85c;
 }
 
 p {
@@ -97,13 +98,13 @@ a {
 /* Floating button styling */
 .whatsapp-btn {
     position: fixed;
-    bottom: 150px;
+    bottom: 20px;
     right: 25px;
     background-color: #5cb85c;
     color: white;
     border-radius: 50%;
     padding: 15px;
-    font-size: 30px;
+    font-size: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background-color 0.3s ease;
