@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #2B2D2F;
+}
+
+.logo img {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: #2B2D2F;
+    border-right: 1px solid #858484;
+    padding: 0 20px;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+
+.contain-hamburger {
+    display: none;
+}
+
+.menu-container {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.menu {
+    list-style: none;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #858484;
+}
+
+.menu a {
+    padding: 13px 0;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    gap: 15px;
+}
+
+.menu a.active {
+    border: 1px solid #858484;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu a i {
+    font-size: 17px;
+}
+
+
+/* footer  */
+footer {
+    color: #fff;
+    text-align: center;
+    margin-top: 13rem;
+}
+
+.footer-copyright {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+/* Sidebar hidden state */
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+/* Arrow to toggle sidebar */
+.toggle-sidebar {
+    position: absolute;
+    position: fixed;
+    top: 1rem;
+    left: 250px;
+    padding: 10px 5px;
+    border: 1px solid #858484;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+.toggle-sidebar i {
+    color: white;
+    font-size: 20px;
+}
+
+.container.sidebar-closed .toggle-sidebar {
+    left: 20px;
+}
+
+.container.sidebar-closed .main-content {
+    margin-left: 20px;
+}
+
+
+
+
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 10px;
+    margin-left: 250px;
+    transition: margin-left 0.2s ease;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #858484;
+    padding: 10px;
+}
+
+.profile-summary {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #858484;
+}
+
+
+/* Account Overview Section */
+
+
+/* Special Offers Section */
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .contain-hamburger {
+        display: block;
+        padding: 0px 20px;
+        padding-top: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* General styles */
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 310px;
+        height: 100%;
+        background: #2B2D2F;
+        border-right: 1px solid #858484;
+        transition: left 0.7s ease-in-out;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 4rem;
+    }
+
+    .menu a {
+        margin-bottom: 0px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .menu-container footer {
+        margin-top: 5rem;
+        padding: 20px 5px;
+        text-align: center;
+    }
+
+    .menu-container.active {
+        left: 0;
+    }
+
+    .hamburger {
+        cursor: pointer;
+    }
+
+    .hamburger i {
+        font-size: 25px;
+        color: #ccc;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    /* Arrow to toggle sidebar */
+    .toggle-sidebar {
+        display: none;
+    }
+
+    /* footer  */
+    footer {
+        color: #fff;
+        text-align: center;
+        border: 1px solid #858484;
+        margin: 5px;
+    }
+
+    .footer-copyright {
+        font-size: 13px;
+    }
+
+
+    /* Main Content */
+    .main-content {
+        margin-left: 0px;
+        width: 100%;
+        padding-top: 0;
+
+    }
+
+    .profile-summary {
+        padding: 0 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        margin-left: 0rem;
+    }
+
+    .profile-pic {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile-summary h2 {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .profile-summary p {
+        font-size: 15px;
+    }
+
+
+    /* Account Overview Section */
+
+
+    /* Special Offers Section */
+
+
+}

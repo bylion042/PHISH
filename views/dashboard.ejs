@@ -4,15 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="">
+    <link rel="icon" href="/uploads/vavicon.png">
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
-    <h1>Welcome to your Dashboard</h1>
-    <p><strong>Username:</strong> <%= user.username %></p>
-    <p><strong>Email:</strong> <%= user.email %></p>
-    
-    <form action="/logout" method="POST">
-        <button type="submit">Logout</button>
-    </form>
+
+
+
+
+
+    <div class="container">
+        <!-- sidebar -->
+        <%- include ('partials/sidebar.ejs') %>
+
+            <!-- Main content -->
+            <main class="main-content">
+                <header class="header">
+                    <div class="profile-summary">
+                        <img src="/uploads/vavicon.png" alt="Profile" class="profile-pic">
+                        <div>
+                            <h2>
+                                <%= user.username %>
+                            </h2>
+                            <p>
+                                <%= user.email %>
+                            </p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Account Overview Section -->
+                <section class="account-overview">
+                </section>
+
+
+                
+
+                <!-- Special Offers Section -->
+                <section class="special-offers">
+                </section>
+            </main>
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/b3fa93e021.js" crossorigin="anonymous"></script>
+    <script src="/js/dashboard.js"></script>
 </body>
 </html>
