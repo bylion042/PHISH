@@ -121,6 +121,23 @@ footer {
 }
 
 
+/* Floating button styling */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    background-color: #858484;
+    border: 1px solid #2B2D2F;
+    color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    box-shadow: 0 0px 10px rgba(210, 209, 209, 0.441);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
 
 
 
@@ -208,8 +225,8 @@ footer {
     }
 
     .menu-container footer {
-        margin-top: 5rem;
-        padding: 20px 5px;
+        margin-top: 6rem;
+        padding: 10px 5px;
         text-align: center;
     }
 
@@ -244,7 +261,8 @@ footer {
     }
 
     .footer-copyright {
-        font-size: 13px;
+        font-size: 14px;
+        font-weight: 500;
     }
 
 
