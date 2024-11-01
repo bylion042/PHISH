@@ -24,8 +24,6 @@ body {
 
 #canvas {
     display: block;
-    /* width: 100%; */
-    /* height: 100%; */
     position: relative;
 }
 
@@ -58,15 +56,15 @@ input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
-    border: 1px solid #75c575;
+    border: 1px solid #807f7f;
     font-size: 16px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #75c575;
+    color: #807f7f;
 }
 
 
 button {
-    background-color: #75c575;
+    background-color: #807f7f;
     color: white;
     padding: 12px;
     border: none;
@@ -84,13 +82,12 @@ img {
 
 p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
 }
 
 a {
-    color: #5cb85c;
-    text-decoration: none;
+    color: #807f7f;
 }
 
 
@@ -100,8 +97,8 @@ a {
     position: fixed;
     bottom: 40px;
     right: 25px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: #807f7f;
+    color: #fff;
     border-radius: 50%;
     padding: 15px;
     font-size: 20px;
