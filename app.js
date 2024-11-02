@@ -1,9 +1,8 @@
-// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/auth');  // Only require this once
 require('dotenv').config();
 
 const app = express();
@@ -26,7 +25,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .catch(err => console.log(err));
 
 // Routes
-app.use('/', authRoutes);
+app.use('/', authRoutes); 
 
 // Start server
 const PORT = process.env.PORT || 3000;

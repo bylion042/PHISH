@@ -1,7 +1,3 @@
-
-
-
-
 // Get all the menu items
 const menuItems = document.querySelectorAll('.menu a');
 
@@ -54,6 +50,9 @@ networkItems.forEach(item => {
     });
 });
 
+
+
+
 // HAMBURGER 
 document.addEventListener("DOMContentLoaded", function() {
     const hamburgerMenu = document.getElementById("hamburger-menu");
@@ -75,3 +74,39 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+
+
+//  OVER ALL SECTION SLIDE DOWN 
+document.querySelectorAll('.free-offers, .premium-offers').forEach(section => {
+    section.addEventListener('click', () => {
+        // Remove 'active' class and close all other sections
+        document.querySelectorAll('.free-offers, .premium-offers').forEach(s => {
+            if (s !== section) {
+                s.classList.remove('active');
+                s.querySelector('.content').classList.remove('show');
+            }
+        });
+
+        // Toggle the clicked section's content and border
+        const content = section.querySelector('.content');
+        content.classList.toggle('show');
+        section.classList.toggle('active');
+    });
+});
+
+
+
+
+
+
+// Function to copy URL to clipboard
+function copyFacebookLink() {
+    const facebookLink = document.getElementById("facebookLink").href;
+    navigator.clipboard.writeText(facebookLink).then(() => {
+        alert("URL copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy URL: ", err);
+    });
+}

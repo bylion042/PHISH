@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phish</title>
     <link rel="icon" href="/uploads/vavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/facebook.css">
 </head>
+
 <body>
 
     <div class="container">
         <!-- sidebar -->
         <%- include ('partials/sidebar.ejs') %>
 
+
+
             <!-- Main content -->
             <main class="main-content">
                 <header class="header">
                     <div class="profile-summary">
-                        <img src="/uploads/e80cf8ac52c85621931fb7ccec5260f3-removebg-preview.png" alt="Profile" class="profile-pic">
+                        <img src="/uploads/e80cf8ac52c85621931fb7ccec5260f3-removebg-preview.png" alt="Profile"
+                            class="profile-pic">
                         <div>
                             <h2>
                                 <%= user.username %>
@@ -30,27 +35,40 @@
                     </div>
                 </header>
 
-                <!-- Account Overview Section -->
-                <section class="account-overview">
-                </section>
 
 
-                <!-- Special Offers Section -->
-                <section class="special-offers">
+                <!-- OVER ALL SECTION  -->
+                <section class="section-content">
+
+                    <section class="free-offers">
+                        <h1>Free Offers</h1>
+                        <div class="content">
+                            <%- include ('partials/free-offers.ejs') %>
+                        </div>
+                    </section>
+
+                    <section class="premium-offers">
+                        <h1>Premium Offers</h1>
+                        <div class="content">
+                            <%- include ('partials/premium-offers.ejs') %>
+                        </div>
+                    </section>
+
                 </section>
             </main>
 
 
+
+
+
             <!-- WhatsApp Button -->
-        <a href="https://chat.whatsapp.com/GlSXvTwmoyVIYxEcbmYA2a" target="_blank" class="whatsapp-btn"title="Join our WhatsApp Community">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+            <%- include ('partials/whatsapp-btn.ejs') %>
+           
     </div>
-
-
 
 
     <script src="https://kit.fontawesome.com/b3fa93e021.js" crossorigin="anonymous"></script>
     <script src="/js/dashboard.js"></script>
 </body>
+
 </html>
