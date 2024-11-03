@@ -28,7 +28,8 @@
     color: #ccc;
     padding: 10px;
     font-size: 10rem;
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 .facebook .url{
     display: flex;
@@ -45,7 +46,7 @@ button {
     background: none;
 }
 .facebook a{
-    font-size: 17px;
+    font-size: 15px;
     color: #ccc;
     display: flex;
     align-items: center;
@@ -54,11 +55,11 @@ button {
 
 
 .facebook p strong{
-    font-size: 17px;
+    font-size: 16px;
     color: #ccc;
 }
 .facebook p{
-    padding: 10px 0;
-    font-size: 15px;
+    padding: 15px 0;
+    font-size: 14px;
     color: #ccc;
 }
