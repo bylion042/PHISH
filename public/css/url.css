@@ -12,12 +12,12 @@
 }
 
 
-.facebook, .twitter, .tiktok {
+.facebook, .twitter, .tiktok, .instagram, .reddit, .discord, .linkedin {
     border-bottom: 1px solid #858484;
     margin-bottom: 3rem;
 }
 
-.facebook .icon, .twitter .icon, .tiktok .icon {
+.facebook .icon, .twitter .icon, .tiktok .icon, .instagram .icon, .reddit .icon, .discord .icon, .linkedin .icon {
     border: 1px solid #858484;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@
     margin-bottom: 15px;
 }
 
-.facebook .url, .twitter .url, .tiktok .url {
+.facebook .url, .twitter .url, .tiktok .url, .instagram .url, .reddit .url, .discord .url, .linkedin .url {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -46,7 +46,7 @@ button {
     background: none;
 }
 
-.facebook a, .twitter a, .tiktok a {
+.facebook a, .twitter a, .tiktok a, .instagram a, .reddit a, .discord a, .linkedin a {
     font-size: 15px;
     color: #ccc;
     display: flex;
@@ -54,12 +54,12 @@ button {
     justify-content: center;
 }
 
-.facebook p strong, .twitter p strong, .tiktok p strong {
+.facebook p strong, .twitter p strong, .tiktok p strong, .instagram p strong, .reddit p strong, .discord p strong, .linkedin p strong {
     font-size: 16px;
     color: #ccc;
 }
 
-.facebook p, .twitter p, .tiktok p {
+.facebook p, .twitter p, .tiktok p, .instagram p, .reddit p, .discord p, .linkedin p {
     padding: 10px 0;
     font-size: 14px;
     color: #ccc;

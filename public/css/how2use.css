@@ -1,0 +1,112 @@
+/* styles.css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: #2B2D2F;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+.how-to-container {
+    width: 60%;
+    margin: auto;
+    background-color: #3A3B3C;
+    padding: 20px;
+    border: 1px solid #858484; /* Border only for the active (open) section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #ccc;
+    font-size: larger;
+    margin-bottom: 1rem;
+}
+
+.back-to-dashboard {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    color: #ccc;
+    text-decoration: none;
+    border: 1px solid #858484;
+}
+
+.video-section {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.b-screen{
+    display: block;
+}
+.s-screen{
+    display: none;
+}
+
+.steps-section {
+    margin-bottom: 20px;
+}
+
+.steps-section h2 {
+    color: #ccc;
+    font-size: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps-section ol {
+    list-style: none;
+    color: #ccc;
+}
+
+.steps-section li {
+    margin-bottom: 10px;
+}
+.steps-section li strong {
+    font-size: 19px;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+    body{
+    margin-top: 0rem;
+    padding: 20px 10px;
+    }
+
+    .how-to-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+    }
+    .how-to-container {
+        width: 97%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .b-screen{
+        display: none;
+    }
+    .s-screen{
+        display: block;
+    }
+
+}

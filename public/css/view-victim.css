@@ -24,6 +24,21 @@ h2 {
     font-weight: 500;
     padding-bottom: 0;
 }
+@keyframes close-open-eye {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.1);
+    }
+  }
+  
+  .blinking-eye {
+    display: inline-block;
+    animation: close-open-eye 1s infinite;
+    transform-origin: center center;
+  }
+  
 
 .back-to-dashboard {
     display: inline-block;

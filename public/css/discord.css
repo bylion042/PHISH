@@ -1,0 +1,105 @@
+/* discord.css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #5865F2; */
+    background-image: url(/uploads/dicord\ bg.png);
+    background-size: cover;
+    background-position: center; 
+    /* background-repeat: no-repeat;  */
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.login-container {
+    background-color: #2C2F33;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    width: 50%;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #40444B;
+    color: white;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #7289DA;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #5b6eae;
+}
+
+.login-container a {
+    color: #7289DA;
+    text-decoration: none;
+}
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+
+.qr-code {
+    margin-top: 20px;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .login-container {
+        width: 95%;
+    }
+    
+    body{
+    margin-top: 3rem;
+    }
+
+}
