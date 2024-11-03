@@ -12,12 +12,12 @@
 }
 
 
-.facebook , .twitter{
+.facebook, .twitter, .tiktok {
     border-bottom: 1px solid #858484;
     margin-bottom: 3rem;
 }
 
-.facebook .icon, .twitter .icon{
+.facebook .icon, .twitter .icon, .tiktok .icon {
     border: 1px solid #858484;
     display: flex;
     justify-content: center;
@@ -29,12 +29,14 @@
     margin-top: 10px;
     margin-bottom: 15px;
 }
-.facebook .url, .twitter .url{
+
+.facebook .url, .twitter .url, .tiktok .url {
     display: flex;
     gap: 5px;
     align-items: center;
     border: 1px solid #858484;
 }
+
 button {
     border: none;
     border-right: 1px solid #858484;
@@ -43,7 +45,8 @@ button {
     padding: 10px;
     background: none;
 }
-.facebook a, .twitter a{
+
+.facebook a, .twitter a, .tiktok a {
     font-size: 15px;
     color: #ccc;
     display: flex;
@@ -51,12 +54,12 @@ button {
     justify-content: center;
 }
 
-
-.facebook p strong, .twitter p strong {
+.facebook p strong, .twitter p strong, .tiktok p strong {
     font-size: 16px;
     color: #ccc;
 }
-.facebook p, .twitter p{
+
+.facebook p, .twitter p, .tiktok p {
     padding: 10px 0;
     font-size: 14px;
     color: #ccc;

