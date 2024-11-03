@@ -1,4 +1,3 @@
-/* Content styling */
 .content {
     overflow: hidden;
 }
@@ -14,17 +13,26 @@
 
 
 .facebook {
-    padding: 20px 10px;
-    border: 1px solid #858484;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* padding: 20px 0px; */
+    /* border: 1px solid #858484; */
+    border-bottom: 1px solid #858484;
+
 }
 
-.image {
-    width: 100%;
+.facebook .icon{
+    border: 1px solid #858484;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A3B3C;
+    color: #ccc;
+    padding: 10px;
+    font-size: 10rem;
+    margin: 10px 0;
 }
 .facebook .url{
     display: flex;
-    gap: 8rem;
+    gap: 5px;
     align-items: center;
     border: 1px solid #858484;
 }
@@ -46,11 +54,11 @@ button {
 
 
 .facebook p strong{
-    font-size: 19px;
+    font-size: 17px;
     color: #ccc;
 }
 .facebook p{
-    padding: 10px 0 0 0;
-    font-size: 16px;
+    padding: 10px 0;
+    font-size: 15px;
     color: #ccc;
 }

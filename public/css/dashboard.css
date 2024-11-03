@@ -107,7 +107,6 @@ footer {
     bottom: 40px;
     right: 25px;
     background-color: #858484;
-    border: 1px solid #2B2D2F;
     color: #fff;
     border-radius: 50%;
     padding: 15px;
@@ -168,15 +167,19 @@ footer {
 .free-offers.active, .premium-offers.active {
     border: 1px solid #858484; /* Border only for the active (open) section */
 }
+.drop{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #858484;
+    align-items: center;
+    color: #ccc;
+    
+}
 .free-offers h1, .premium-offers h1 {
-    padding: 5px;
-    margin-bottom: 10px;
-    font-weight: lighter;
-    font-size: 20px;
+    padding: 5px 0;
+    font-size: 18px;
     color: #ccc;
     display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #858484;
 }
 
 
@@ -203,7 +206,6 @@ footer {
         justify-content: center;
         align-items: center;
     }
-
     /* General styles */
     .menu-container {
         position: fixed;
@@ -224,41 +226,33 @@ footer {
         padding: 20px;
         margin-top: 4rem;
     }
-
     .menu a {
         margin-bottom: 0px;
         color: #fff;
         font-size: 16px;
     }
-
     .menu-container footer {
         margin-top: 12rem;
         padding: 10px 5px;
         text-align: center;
     }
-
     .menu-container.active {
         left: 0;
     }
-
     .hamburger {
         cursor: pointer;
     }
-
     .hamburger i {
         font-size: 25px;
         color: #ccc;
     }
-
     .sidebar {
         display: none;
     }
-
     /* Arrow to toggle sidebar */
     .toggle-sidebar {
         display: none;
     }
-
     /* footer  */
     footer {
         color: #fff;
@@ -266,7 +260,6 @@ footer {
         border: 1px solid #858484;
         margin: 5px;
     }
-
     .footer-copyright {
         font-size: 14px;
         font-weight: 500;
@@ -280,7 +273,6 @@ footer {
         padding-top: 0;
 
     }
-
     .profile-summary {
         padding: 0 0;
         display: flex;
@@ -289,23 +281,37 @@ footer {
         color: #fff;
         margin-left: 0rem;
     }
-
     .profile-pic {
         width: 50px;
         height: 50px;
     }
-
     .profile-summary h2 {
         font-weight: 500;
         font-size: 20px;
     }
-
     .profile-summary p {
         font-size: 15px;
     }
 
 
-    /* Account Overview Section */
+/* Account Overall Section */
+    .section-content {
+        padding: 10px 0;
+        gap: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .free-offers, .premium-offers {
+        padding: 7px;
+        cursor: pointer;
+        border: none; /* No border by default */
+    }
+    .free-offers h1, .premium-offers h1 {
+        font-size: 16px;
+    }
+    
+
 
 
     /* Special Offers Section */

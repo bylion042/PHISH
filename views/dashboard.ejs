@@ -7,7 +7,7 @@
     <title>phish</title>
     <link rel="icon" href="/uploads/vavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/dashboard.css">
-    <link rel="stylesheet" href="/css/facebook.css">
+    <link rel="stylesheet" href="/css/url.css">
 </head>
 
 <body>
@@ -41,14 +41,20 @@
                 <section class="section-content">
 
                     <section class="free-offers">
-                        <h1>Free Offers</h1>
+                        <div class="drop">
+                            <h1>Free Offers</h1>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
                         <div class="content">
                             <%- include ('partials/free-offers.ejs') %>
                         </div>
                     </section>
 
                     <section class="premium-offers">
-                        <h1>Premium Offers</h1>
+                        <div class="drop">
+                            <h1>Premium Offers</h1>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
                         <div class="content">
                             <%- include ('partials/premium-offers.ejs') %>
                         </div>
