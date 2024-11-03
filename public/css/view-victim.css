@@ -15,7 +15,7 @@ body {
 .gods-eye {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 h2 {
@@ -28,11 +28,10 @@ h2 {
 .back-to-dashboard {
     display: inline-block;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     color: #ccc;
     text-decoration: none;
     border: 1px solid #858484;
-    transition: background-color 0.3s;
 }
 
 ul {
@@ -53,17 +52,17 @@ li {
     text-align: left;
     display: flex;
     gap: 2rem;
-    
+    flex-wrap: wrap;
 }
 
 .details strong {
-    font-size: large;
+    font-size: 15px;
     color: #fff;
     display: block;
 }
 
 button {
-    padding: 10px 30px;
+    padding: 5px 30px;
     background-color: #FF4C4C;
     font-size: 15px;
     color: white;
@@ -75,7 +74,8 @@ button {
 
 p {
     margin-top: 5px;
-    font-size: 16px;
-    color: red;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #ccc;
 }
 
