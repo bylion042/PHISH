@@ -1,0 +1,76 @@
+/* view-victim.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #2B2D2F;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.gods-eye {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    padding-bottom: 0px;
+}
+.back-to-dashboard {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #ccc;
+    text-decoration: none;
+    border: 1px solid #858484;
+    transition: background-color 0.3s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #858484;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3A3B3C;
+}
+
+.details {
+    text-align: left;
+}
+
+.details strong {
+    display: block;
+    font-size: large;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #FF4C4C;
+    font-size: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d93636;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+

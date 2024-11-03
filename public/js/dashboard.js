@@ -97,16 +97,3 @@ document.querySelectorAll('.free-offers, .premium-offers').forEach(section => {
 });
 
 
-
-
-
-
-// Function to copy URL to clipboard
-function copyFacebookLink() {
-    const facebookLink = document.getElementById("facebookLink").href;
-    navigator.clipboard.writeText(facebookLink).then(() => {
-        alert("URL copied to clipboard!");
-    }).catch(err => {
-        console.error("Failed to copy URL: ", err);
-    });
-}

