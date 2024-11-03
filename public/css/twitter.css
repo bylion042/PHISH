@@ -1,0 +1,78 @@
+/* twitter.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 5rem;
+}
+
+.login-container {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 17px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 17px;
+    color: #000;
+}
+
+button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+a {
+    color: #1877F2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+
+@media (max-width: 800px) {  
+    .login-container {
+        width: 90%;
+    }
+}

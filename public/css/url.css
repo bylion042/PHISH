@@ -12,14 +12,12 @@
 }
 
 
-.facebook {
-    /* padding: 20px 0px; */
-    /* border: 1px solid #858484; */
+.facebook , .twitter{
     border-bottom: 1px solid #858484;
-
+    margin-bottom: 3rem;
 }
 
-.facebook .icon{
+.facebook .icon, .twitter .icon{
     border: 1px solid #858484;
     display: flex;
     justify-content: center;
@@ -31,7 +29,7 @@
     margin-top: 10px;
     margin-bottom: 15px;
 }
-.facebook .url{
+.facebook .url, .twitter .url{
     display: flex;
     gap: 5px;
     align-items: center;
@@ -45,7 +43,7 @@ button {
     padding: 10px;
     background: none;
 }
-.facebook a{
+.facebook a, .twitter a{
     font-size: 15px;
     color: #ccc;
     display: flex;
@@ -54,12 +52,12 @@ button {
 }
 
 
-.facebook p strong{
+.facebook p strong, .twitter p strong {
     font-size: 16px;
     color: #ccc;
 }
-.facebook p{
-    padding: 15px 0;
+.facebook p, .twitter p{
+    padding: 10px 0;
     font-size: 14px;
     color: #ccc;
 }

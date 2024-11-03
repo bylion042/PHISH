@@ -12,7 +12,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
-
 }
 
 
@@ -42,14 +41,14 @@ form {
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
 }
 
 button {
-    padding: 15px;
+    padding: 10px;
     background-color: #1877F2;
     color: white;
     border: none;
