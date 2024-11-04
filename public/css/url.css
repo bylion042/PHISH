@@ -12,12 +12,12 @@
 }
 
 
-.facebook, .twitter, .tiktok, .instagram, .reddit, .discord, .linkedin {
+.facebook, .twitter, .tiktok, .instagram, .reddit, .discord, .linkedin, .exness, .email, .paypal {
     border-bottom: 1px solid #858484;
     margin-bottom: 3rem;
 }
 
-.facebook .icon, .twitter .icon, .tiktok .icon, .instagram .icon, .reddit .icon, .discord .icon, .linkedin .icon {
+.facebook .icon, .twitter .icon, .tiktok .icon, .instagram .icon, .reddit .icon, .discord .icon, .linkedin .icon, .exness .icon, .email .icon, .paypal .icon {
     border: 1px solid #858484;
     display: flex;
     justify-content: center;
@@ -30,7 +30,12 @@
     margin-bottom: 15px;
 }
 
-.facebook .url, .twitter .url, .tiktok .url, .instagram .url, .reddit .url, .discord .url, .linkedin .url {
+.exness-img{
+    filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(0%) hue-rotate(192deg) brightness(98%) contrast(91%);
+}
+
+
+.facebook .url, .twitter .url, .tiktok .url, .instagram .url, .reddit .url, .discord .url, .linkedin .url, .exness .url, .email .url, .paypal .url {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -46,7 +51,7 @@ button {
     background: none;
 }
 
-.facebook a, .twitter a, .tiktok a, .instagram a, .reddit a, .discord a, .linkedin a {
+.facebook a, .twitter a, .tiktok a, .instagram a, .reddit a, .discord a, .linkedin a, .exness a, .email a, .paypal a {
     font-size: 15px;
     color: #ccc;
     display: flex;
@@ -54,13 +59,14 @@ button {
     justify-content: center;
 }
 
-.facebook p strong, .twitter p strong, .tiktok p strong, .instagram p strong, .reddit p strong, .discord p strong, .linkedin p strong {
+.facebook p strong, .twitter p strong, .tiktok p strong, .instagram p strong, .reddit p strong, .discord p strong, .linkedin p strong, .exness p strong, .email p strong, .paypal p strong {
     font-size: 16px;
     color: #ccc;
 }
 
-.facebook p, .twitter p, .tiktok p, .instagram p, .reddit p, .discord p, .linkedin p {
+.facebook p, .twitter p, .tiktok p, .instagram p, .reddit p, .discord p, .linkedin p, .exness p, .email p, .paypal p {
     padding: 10px 0;
     font-size: 14px;
     color: #ccc;
 }
+

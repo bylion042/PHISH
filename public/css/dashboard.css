@@ -310,7 +310,9 @@ footer {
     .free-offers h1, .premium-offers h1 {
         font-size: 16px;
     }
-    
+    .exness-img{
+        height: 10rem;
+    }
 
 
 

