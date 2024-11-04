@@ -74,6 +74,11 @@ router.get('/how2use', (req, res) => {
     res.render('how2use');
 });
 
+// render short link route 
+router.get('/shortlink', (req, res) => {
+    res.render('shortlink');
+});
+
 
 
 
