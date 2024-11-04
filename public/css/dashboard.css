@@ -279,7 +279,7 @@ footer {
     border: 1px solid #858484;
     color: #ccc;
     background-color: #3A3B3C;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 
@@ -458,10 +458,11 @@ footer {
         margin: 0;
         border-radius: 30px;
     }
+
     .box1 p,
-.box2 p {
-    text-align: center;
-}
+    .box2 p {
+        text-align: center;
+    }
 
     .footer-bottom {
         text-align: center;
