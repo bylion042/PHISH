@@ -461,7 +461,7 @@ footer {
 
     .box1 p,
     .box2 p {
-        text-align: center;
+        /* text-align: center; */
     }
 
     .footer-bottom {

