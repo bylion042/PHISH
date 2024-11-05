@@ -473,7 +473,7 @@ footer {
 
     .box1 p,
     .box2 p {
-        /* text-align: center; */
+        font-size: 16px;
     }
 
     .footer-bottom {
