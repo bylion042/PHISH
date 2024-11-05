@@ -24,6 +24,13 @@ body {
     text-align: center;
 }
 
+.login-container i{
+    font-size: 70px;
+    padding: 20px;
+    color: #1877F2;
+}
+
+
 h2{
     padding-bottom: 15px;
 }

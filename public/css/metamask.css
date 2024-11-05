@@ -1,0 +1,94 @@
+/* metamask.css */
+body {
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.container {
+    background-color: #333333;
+
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.container p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.phrase-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.phrase-input input {
+    width: 70px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+}
+
+.phrase-input input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 1);
+    /* Orange highlight */
+}
+
+.submit-button {
+    background-color: #f6851b;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e76b1c;
+}
+
+.link {
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+    .container {
+        padding: 20px 10px;
+        width: 90%;
+        margin-top: 0rem;
+    }
+}

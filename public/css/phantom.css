@@ -1,0 +1,83 @@
+/* phantom.css */
+body {
+    background-color: #E0E0FF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.container {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+.container p {
+    margin-bottom: 20px;
+}
+
+.phrase-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.phrase-input input {
+    width: 60px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+}
+
+.phrase-input input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.import-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.import-button:hover {
+    background-color: #555;
+}
+
+.link {
+    color: #888;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 800px) {
+    .container {
+        padding: 40px 10px;
+        width: 90%;
+    }
+}

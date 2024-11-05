@@ -22,11 +22,17 @@ body {
     max-width: 400px; /* Adjusted for better full-width view */
 }
 
+.login-container i{
+    font-size: 70px;
+    padding: 10px;
+    color: #F58529;
+}
+
 h1 {
     font-family: 'Billabong', cursive;
     font-size: 2.5rem;
     color: #262626;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -61,7 +67,7 @@ a {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #0095f6;
+    background-color: #F58529;
     color: white;
     border: none;
     border-radius: 5px;
@@ -72,7 +78,7 @@ button {
 }
 
 button:hover {
-    background-color: #007ac9;
+    background-color: #F58529;
 }
 
 .or-divider {
@@ -99,7 +105,7 @@ button:hover {
 .facebook-login {
     width: 100%; /* Ensures full width */
     padding: 12px;
-    background-color: #0095f6;
+    background-color: #F58529;
     color: white;
     border: none;
     border-radius: 5px;

@@ -30,6 +30,12 @@ body {
     width: 50%;
 }
 
+.login-container i{
+    font-size: 70px;
+    padding: 20px;
+    color: #7289DA;
+}
+
 .login-container h2 {
     margin-bottom: 10px;
 }
@@ -99,7 +105,7 @@ body {
     }
     
     body{
-    margin-top: 3rem;
+    margin-top: 15px;
     }
 
 }

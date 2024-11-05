@@ -20,6 +20,12 @@ body {
     border-radius: 8px;
     width: 50%;
 }
+.login-container i{
+    font-size: 70px;
+    padding: 20px;
+    color: #FE2C55;
+}
+
 
 h2 {
     margin-bottom: 20px;

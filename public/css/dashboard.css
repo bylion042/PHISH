@@ -423,9 +423,21 @@ footer {
         font-size: 16px;
     }
 
-    .exness-img {
-        height: 10rem;
+    .trustwallet .icon img{
+        width: 20rem;
     }
+
+    .exness .icon img{
+        width: 13rem;
+    }
+
+    .phantom .icon img,.solflare .icon img{
+        width: 10rem;
+    }
+
+    /* .exness-img {
+        height: 10rem;
+    } */
 
 
 
