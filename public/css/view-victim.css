@@ -24,21 +24,25 @@ h2 {
     font-weight: 500;
     padding-bottom: 0;
 }
+
 @keyframes close-open-eye {
-    0%, 100% {
-      transform: scaleY(1);
+
+    0%,
+    100% {
+        transform: scaleY(1);
     }
+
     50% {
-      transform: scaleY(0.1);
+        transform: scaleY(0.1);
     }
-  }
-  
-  .blinking-eye {
+}
+
+.blinking-eye {
     display: inline-block;
     animation: close-open-eye 1s infinite;
     transform-origin: center center;
-  }
-  
+}
+
 
 .back-to-dashboard {
     display: inline-block;
@@ -62,6 +66,7 @@ li {
     flex-direction: column;
     background-color: #3A3B3C;
 }
+
 
 .details {
     text-align: left;
@@ -94,3 +99,15 @@ p {
     color: #ccc;
 }
 
+
+
+
+
+
+@media (max-width: 800px) {  
+    .mua strong {
+        padding: 10px 30px;
+        text-align: center;
+    }
+    
+}

@@ -279,7 +279,7 @@ footer {
     border: 1px solid #858484;
     color: #ccc;
     background-color: #3A3B3C;
-    margin-top: 60px;
+    margin-top: 85px;
 }
 
 
@@ -434,10 +434,6 @@ footer {
     .phantom .icon img,.solflare .icon img{
         width: 10rem;
     }
-
-    /* .exness-img {
-        height: 10rem;
-    } */
 
 
 

