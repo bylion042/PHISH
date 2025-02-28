@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opay Receipt Generator</title>
+    <link rel="icon" href="/uploads/vavicon 2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/opay.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- OPAY FORM  -->
+        <form id="receiptForm">
+            <h2>Fill Opay Receipt Details</h2>
+
+             <a href="/dashboard" class="home">Back to Dashboard</a>
+
+
+            <label>Amount:</label>
+            <input type="text" id="amount" required>
+            
+            <label>Date & Time:</label>
+            <input type="datetime-local" id="date" required>
+            
+            <label>Recipient Name:</label>
+            <input type="text" id="recipientName" required>
+            
+            <label>Recipient Bank & Account:</label>
+            <input type="text" id="recipientBank" required>
+            
+            <label>Sender Name:</label>
+            <input type="text" id="senderName" required>
+            
+            <label>Sender Bank & Account:</label>
+            <input type="text" id="senderBank" required>
+            
+            <label>Remark:</label>
+            <input type="text" id="remark">
+            
+            <button type="submit">Generate Receipt</button>
+        </form>
+    </div>
+
+    <!-- OPAY RECEIPT  -->
+    <div class="receipt" id="receipt" style="display:none;">
+        <div class="hold">
+            <img src="/uploads/opay logo.png" alt="opay" width="35%">
+            <p>Transaction Receipt</p>
+        </div>
+        <div class="amount" id="displayAmount"></div>
+        <div class="status">SUCCESS</div>
+        <div class="date" id="displayDate"></div>
+        <div class="section">
+            <div class="title">Transaction Type</div>
+            <div class="content"><p>Transfer to bank</p></div>
+        </div>
+        <div class="section">
+            <div class="title">Recipient Details</div>
+            <div class="content"><p id="displayRecipientName"></p><span id="displayRecipientBank"></span></div>
+        </div>
+        <div class="section">
+            <div class="title">Sender Details</div>
+            <div class="content"><p id="displaySenderName"></p><span id="displaySenderBank"></span></div>
+        </div>
+        <div class="section">
+            <div class="title">Remark</div>
+            <div class="content" id="displayRemark"></div>
+        </div>
+        <div class="section">
+            <div class="title">Transaction Reference</div>
+            <div class="content">241030026736677505</div>
+        </div>
+        <div class="section">
+            <div class="title">SessionID</div>
+            <div class="content">100004241030132044121357121887</div>
+        </div>
+        <div class="support">
+            <p>Support</p>customerservice@opay-inc.com
+        </div>
+        <div class="note">
+            Enjoy a reliable & stable network service and a welcome bonus of ₦1,200 cashback on OPay.
+        </div>
+    </div>
+
+    <!-- JavaScript for form submission, scrolling, and receipt display -->
+    <script>
+        document.getElementById("receiptForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Display receipt details
+            document.getElementById("displayAmount").innerText = "₦" + document.getElementById("amount").value;
+            document.getElementById("displayDate").innerText = new Date(document.getElementById("date").value).toLocaleString();
+            document.getElementById("displayRecipientName").innerText = document.getElementById("recipientName").value;
+            document.getElementById("displayRecipientBank").innerText = document.getElementById("recipientBank").value;
+            document.getElementById("displaySenderName").innerText = document.getElementById("senderName").value;
+            document.getElementById("displaySenderBank").innerText = document.getElementById("senderBank").value;
+            document.getElementById("displayRemark").innerText = document.getElementById("remark").value;
+            document.getElementById("receipt").style.display = "block";
+
+            // Scroll to the bottom of the page smoothly
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth" // Smooth scrolling effect
+            });
+        });
+    </script>
+
+</body>
+</html>

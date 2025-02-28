@@ -1,38 +1,102 @@
 <div class="note">
-    <h2>Warning</h2>
-    <i class="fa-solid fa-triangle-exclamation"></i>
+    <h2>Alerts & Promotions</h2>
+    <!-- <i class="fa-solid fa-triangle-exclamation"></i> -->
 </div>
 
 <div class="main-footer">
 
     <div class="box1">
-        <div class="warning-containe" style="text-align: center;">
-            <img src="/uploads/7da385fc-78f9-4673-8adf-ad8e615d8745.gif" alt="Warning GIF"
-                style="max-width: 600px; height: auto;" class="big">
-            <img src="/uploads/Surviving_the_Scroll__Strategies_to_Beat_Social_Media_Addiction-removebg-preview.png"
-                alt="Warning GIF" style="max-width: 100%; height: auto;" class="small">
+        <h3 class="info ads">Advertisement <i class="ri-megaphone-line"></i></h3>
+
+        <div class="warning-containe ads">
+            <div class="slider">
+                <img src="/uploads/ads1.jpeg" alt="ads">
+                <img src="/uploads/ads2.jpeg" alt="ads">
+                <img src="/uploads/ads3.jpeg" alt="ads">
+                <img src="/uploads/ads4.jpeg" alt="ads">
+                <img src="/uploads/ads5.jpeg" alt="ads">
+                <img src="/uploads/ads6.jpeg" alt="ads">
+                <img src="/uploads/ads7.jpeg" alt="ads">
+                <img src="/uploads/ads8.jpeg" alt="ads">
+                <img src="/uploads/ads9.jpeg" alt="ads">
+                <img src="/uploads/ads10.jpeg" alt="ads">
+            </div>
+
+            <div class="ads-info">
+                <p>
+                    Boost Your Brand with Us! Advertise Today!
+                    Are you looking for an effective way to reach a larger audience? Our platform offers prime
+                    advertising space to showcase your brand, products, or services to the right audience. Whether
+                    you're a small business, a growing startup, or an established company, we provide tailored ad
+                    placements designed to maximize visibility and engagement.🚨
+                </p>
+            </div>
         </div>
-        <p>Yoo! to our educational phishing website. This platform has been created strictly for educational purposes to
-            raise awareness about phishing attacks and to teach users how to identify and avoid them. Phishing is a
-            serious cyber threat, and understanding how it works is crucial for personal and organizational
-            cybersecurity.</p>
+
+        <p>
+            No ads yet! Looking to promote your business or brand on our platform? If you're interested in showcasing
+            your ads on our website, simply click on the "whatsapp icon" link in the sidebar to get in touch with the
+            admin. We offer tailored ad placements for the duration we agree upon, ensuring that your message reaches
+            the right audience.
+        </p>
     </div>
+
+
 
     <div class="box2">
-        <div class="warning-containe" style="text-align: center;">
-            <img src="/uploads/7da385fc-78f9-4673-8adf-ad8e615d8745.gif" alt="Warning GIF"
-                style="max-width: 600px; height: auto;" class="big">
+        <h3 class="info warning">Warning <i class="ri-alarm-warning-line"></i> </h3>
 
-            <img src="/uploads/WhatsApp_Image_2024-11-04_at_20.47.07_3a6b151a-removebg-preview.png" alt="Warning GIF"
-                style="max-width: 100%; height: auto;" class="small">
+        <div class="warning-containe alart" style="text-align: center;">
+            <img src="/uploads/warning.jpeg" alt="warning blog" style="max-width: 600px; height: auto;" class="big">
+            <img src="/uploads/warning1.jpeg" alt="warning blog" style="max-width: 600px; height: auto;" class="small">
+
+
+            <div class="ads-info">
+                <p>
+                    ⚠️ WARNING: EDUCATIONAL PURPOSES ONLY ⚠️
+                    This platform is strictly for educational purposes only. It is designed to help users understand and
+                    recognize phishing techniques to enhance cybersecurity awareness.
+                    Any misuse of the information provided here for fraudulent or illegal activities is strictly
+                    prohibited. If you engage in any form of cybercrime, you are solely responsible for your actions. We
+                    do not endorse or support any illegal activities, and we will not be held liable for any
+                    consequences arising from misuse.
+                    Stay ethical. Stay safe. 🚨
+                </p>
+            </div>
         </div>
-        <p>Yoo! to our educational phishing website. This platform has been created strictly for educational purposes to
-            raise awareness about phishing attacks and to teach users how to identify and avoid them. Phishing is a
+        <p>
+            Yoo! to our educational phishing website. This platform has been created strictly for educational purposes
+            to raise awareness about phishing attacks and to teach users how to identify and avoid them. Phishing is a
             serious cyber threat, and understanding how it works is crucial for personal and organizational
-            cybersecurity.</p>
+            cybersecurity.
+        </p>
     </div>
 </div>
 
+
+
+
 <div class="footer-bottom">
-    <p>Copyright © Gods Eye 2024. All right reserved.</p>
+    <p>Copyright © gods_eye 2024. All right reserved.</p>
 </div>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let images = document.querySelectorAll(".slider img");
+        let index = 0;
+
+        function changeImage() {
+            images.forEach(img => img.classList.remove("active"));
+            images[index].classList.add("active");
+
+            index = (index + 1) % images.length; // Loop back to the first image
+        }
+
+        images[0].classList.add("active"); // Show first image initially
+        setInterval(changeImage, 3000); // Change image every 3 seconds
+    });
+</script>

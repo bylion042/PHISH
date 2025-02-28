@@ -1,72 +1,174 @@
+:root {
+    --black1: #111317;
+    --black2: #1f2125;
+    --black3: #35373b;
+    --purpel1: #696fdd;
+    --purpel2: #a3a8f0;
+    --white1: #ffffff;
+    --white2: #d1d5db;
+    --background1: linear-gradient(135deg,rgb(186, 190, 253) 0%,rgb(66, 71, 158) 100%);
+    --background2: linear-gradient(180deg, #d6d9fa, rgb(149, 154, 243));
+}
+
+
 .content {
     overflow: hidden;
 }
+
 .content-inner {
     height: 0;
     overflow: hidden;
-    transition: height 0.6s ease, padding 0.6s ease; /* Smooth sliding */
+    transition: height 0.6s ease, padding 0.6s ease;
+    /* Smooth sliding */
     padding: 0 5px;
 }
+
 .content.show .content-inner {
     height: auto;
 }
 
 
-.facebook, .twitter, .tiktok, .instagram, .reddit, .discord, .linkedin, .exness, .email, .paypal, .trustwallet, .metamask, .phantom, .solflare {
-    border-bottom: 1px solid #858484;
-    margin-bottom: 3rem;
+.facebook,
+.twitter,
+.tiktok,
+.instagram,
+.reddit,
+.discord,
+.linkedin,
+.exness,
+.email,
+.paypal,
+.trustwallet,
+.metamask,
+.phantom,
+.solflare {
+    border-bottom: 1px solid var(--black3);
+    margin-bottom: 2rem;
 }
 
-.facebook .icon, .twitter .icon, .tiktok .icon, .instagram .icon, .reddit .icon, .discord .icon, .linkedin .icon, .exness .icon, .email .icon, .paypal .icon, .trustwallet .icon, .metamask .icon, .phantom .icon, .solflare .icon {
-    border: 1px solid #858484;
+.facebook .icon,
+.twitter .icon,
+.tiktok .icon,
+.instagram .icon,
+.reddit .icon,
+.discord .icon,
+.linkedin .icon,
+.exness .icon,
+.email .icon,
+.paypal .icon,
+.trustwallet .icon,
+.metamask .icon,
+.phantom .icon,
+.solflare .icon {
+    border: 1px solid var(--black3);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3A3B3C;
+    background: var(--background1);
     color: #ccc;
     padding: 10px;
     font-size: 10rem;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .exness-img {
     filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(0%) hue-rotate(192deg) brightness(98%) contrast(91%);
 }
 
-.facebook .url, .twitter .url, .tiktok .url, .instagram .url, .reddit .url, .discord .url, .linkedin .url, .exness .url, .email .url, .paypal .url, .trustwallet .url, .metamask .url, .phantom .url, .solflare .url {
+.facebook .url,
+.twitter .url,
+.tiktok .url,
+.instagram .url,
+.reddit .url,
+.discord .url,
+.linkedin .url,
+.exness .url,
+.email .url,
+.paypal .url,
+.trustwallet .url,
+.metamask .url,
+.phantom .url,
+.solflare .url {
     display: flex;
     gap: 5px;
     align-items: center;
-    border: 1px solid #858484;
+    border: 2px solid var(--black2);
+    background: var(--background1);
+    /* border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px; */
+    border-radius: 10px;
 }
 
 button {
     border: none;
-    border-right: 1px solid #858484;
-    color: #ccc;
-    font-size: 14px;
-    padding: 10px;
+    border-right: 7px solid var(--black2);
+    color: var(--black2);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 20px;
     background: none;
 }
 
-.facebook a, .twitter a, .tiktok a, .instagram a, .reddit a, .discord a, .linkedin a, .exness a, .email a, .paypal a, .trustwallet a, .metamask a, .phantom a, .solflare a {
-    font-size: 15px;
-    color: #ccc;
+.facebook a,
+.twitter a,
+.tiktok a,
+.instagram a,
+.reddit a,
+.discord a,
+.linkedin a,
+.exness a,
+.email a,
+.paypal a,
+.trustwallet a,
+.metamask a,
+.phantom a,
+.solflare a {
+    font-size: 13px;
+    color: var(--black2);
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.facebook p strong, .twitter p strong, .tiktok p strong, .instagram p strong, .reddit p strong, .discord p strong, .linkedin p strong, .exness p strong, .email p strong, .paypal p strong, .trustwallet p strong, .metamask p strong, .phantom p strong, .solflare p strong {
-    font-size: 16px;
-    color: #ccc;
-}
-
-.facebook p, .twitter p, .tiktok p, .instagram p, .reddit p, .discord p, .linkedin p, .exness p, .email p, .paypal p, .trustwallet p, .metamask p, .phantom p, .solflare p {
-    padding: 10px 0;
+.facebook p strong,
+.twitter p strong,
+.tiktok p strong,
+.instagram p strong,
+.reddit p strong,
+.discord p strong,
+.linkedin p strong,
+.exness p strong,
+.email p strong,
+.paypal p strong,
+.trustwallet p strong,
+.metamask p strong,
+.phantom p strong,
+.solflare p strong {
     font-size: 14px;
-    color: #ccc;
+    font-weight: bold;
+    color: var(--white2);
+text-decoration: underline;
 }
 
-
+.facebook p,
+.twitter p,
+.tiktok p,
+.instagram p,
+.reddit p,
+.discord p,
+.linkedin p,
+.exness p,
+.email p,
+.paypal p,
+.trustwallet p,
+.metamask p,
+.phantom p,
+.solflare p {
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--white2);
+}

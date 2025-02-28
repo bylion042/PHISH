@@ -2,7 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth');  // Only require this once
+const authRoutes = require('./routes/auth');  
+const viewvictim = require('./routes/viewvictim');  
+const viewwallet = require('./routes/viewwallet');  
+const bankreceipt = require('./routes/bankreceipt');  
 require('dotenv').config();
 
 const app = express();
@@ -26,6 +29,9 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Routes
 app.use('/', authRoutes); 
+app.use('/', viewvictim);  // Register the route
+app.use('/', viewwallet);  // Register the route
+app.use('/', bankreceipt);  // Register the route
 
 // Start server
 const PORT = process.env.PORT || 3000;

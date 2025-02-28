@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gods eye</title>
     <link rel="icon" href="/uploads/vavicon 2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/url.css">
 </head>
@@ -20,10 +21,9 @@
 
             <!-- Main content -->
             <main class="main-content">
-                <header class="header">
+                <header class="header hide">
                     <div class="profile-summary">
-                        <img src="/uploads/WhatsApp_Image_2024-11-04_at_20.47.07_3a6b151a-removebg-preview.png" alt="Profile"
-                            class="profile-pic">
+                        <img src="/uploads/profile.jpeg" alt="Profile" class="profile-pic">
                         <div>
                             <h2>
                                 <%= user.username %>
@@ -40,20 +40,21 @@
                 <!-- OVER ALL SECTION  -->
                 <section class="section-content">
 
-                    <section class="free-offers">
+                    <section class="free-offers free">
                         <div class="drop">
-                            <h1>Free Offers</h1>
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <h1>FREE OFFERS</h1>
+                            <i class="ri-arrow-down-s-line"></i>
                         </div>
                         <div class="content">
                             <%- include ('partials/free-offers.ejs') %>
                         </div>
                     </section>
 
+
                     <section class="premium-offers">
-                        <div class="drop">
-                            <h1>Premium Offers</h1>
-                            <i class="fa-solid fa-chevron-down"></i>
+                        <div class="drop border">
+                            <h1>PREMIUM OFFERS</h1>
+                            <i class="ri-arrow-down-s-line"></i>
                         </div>
                         <div class="content">
                             <%- include ('partials/premium-offers.ejs') %>
@@ -66,6 +67,14 @@
                 <!-- /* MY FOOTER SECTION  */ -->
                 <%- include ('partials/footer.ejs') %>
             </main>
+
+
+            <!-- DRAGABLE IMAGE -->
+            <div class="draggable-image">
+                <span class="close-btn"><i class="ri-close-fill"></i></span>
+                <a href="http://wa.me/+2348059268860"><img src="/uploads/robot.png" alt="Draggable" /></a>
+            </div>
+
 
 
             <!-- WhatsApp Button -->

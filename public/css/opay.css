@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black1: #111317;
+    --black2: #1f2125;
+    --black3: #35373b;
+    --purpel1: #696fdd;
+    --purpel2: #a3a8f0;
+    --white1: #ffffff;
+    --white2: #d1d5db;
+    --background1: linear-gradient(135deg,rgb(186, 190, 253) 0%,rgb(66, 71, 158) 100%);
+    --background2: linear-gradient(180deg, #d6d9fa, rgb(149, 154, 243));
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    /* margin-bottom: 11.50rem; */
+}
+
+/* <!-- OPAY FORM  --> */
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 500px;
+    box-sizing: border-box;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--black1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.home {
+    background: var(--background1);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+}
+.home:hover {
+    background: var(--background2);
+}
+/* Form elements */
+label {
+    font-size: 14px;
+    color: var(--black2);
+    margin-bottom: 8px;
+    display: block;
+}
+input[type="text"], input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--white2);
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* Focus effect for inputs */
+input[type="text"]:focus, input[type="datetime-local"]:focus {
+    border-color: var(--purpel1);
+    box-shadow: 0 0 10px rgba(82, 91, 221, 0.5);
+    outline: none;
+}
+button[type="submit"] {
+    background: var(--background1);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+button[type="submit"]:hover {
+    background: var(--background2);
+}
+/* Add some space between form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Add a footer note */
+form::after {
+    content: "All fields are required";
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Add some animation to the form */
+@keyframes formAppear {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.container {
+    animation: formAppear 0.6s ease-out;
+}
+
+
+@media (max-width: 800px) {
+.container {
+    width: 320px;
+    padding: 40px 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+/* <!-- OPAY RECEIPT  --> */
+.receipt {
+    padding: 10px;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.hold{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.hold p{
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #0baf76;
+    margin-bottom: 10px;
+}
+.status {
+    text-align: center;
+    color: #666;
+    margin-bottom: 8px;
+}
+.date {
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #555;
+}
+.content {
+    font-size: 14px;
+    font-size: 11px;
+    color: #555;
+}
+.content p{
+    font-weight: bold;
+    color: #393838;
+    font-size: 12px;
+    padding: 3px 0;
+    /* font-size: 12px; */
+}
+.support {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #39b087;
+    margin-top: 90px;
+}
+.support p{
+    color: #555;
+
+}
+
+.note {
+    text-align: center;
+    font-size: 10px;
+    color: #555;
+    margin-top: 15px;
+}
+
+
+
